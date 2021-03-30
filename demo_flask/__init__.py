@@ -25,7 +25,8 @@ def get_ara_object(pgm_id):
 
 @app.route("/")
 def index():
-    return "Hello world change"
+    print(socket.gethostbyname(socket.gethostname()))
+    return socket.gethostbyname(socket.gethostname())
 
 @app.route("/getProgram",methods=['GET'])
 def getProgram():
