@@ -25,7 +25,7 @@ def get_ara_object(pgm_id):
 
 @app.route("/")
 def index():
-    return "Hello world"
+    return "Hello world change"
 
 @app.route("/getProgram",methods=['GET'])
 def getProgram():
