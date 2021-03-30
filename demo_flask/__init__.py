@@ -13,8 +13,8 @@ app = Flask(__name__)
 
 def get_ara_object(pgm_id):
     with requests.Session() as ss:
-        ara_login_data = {"userId": os.getenv('ara_login_id'), "userPwd": os.getenv('ara_login_pwd')}
-        ara_login_url = os.getenv('ara_login_url')
+        ara_login_data = {"userId": "swing", "userPwd": "sktarA12~!"}
+        ara_login_url = "http://sara.sktelecom.com:8080/araws/loginSvc/Login"
         ara_login_r = ss.post(ara_login_url,data=ara_login_data)
         pgm_info_url = 'http://sara.sktelecom.com:8080/araws/objectSvc/Search/ListNm?dmnCd=SKT&prjCd=SWING&oprCd=SWGS&objId={}&posStart=0&posEnd=42'.format(pgm_id)
         pgm_info_r = ss.get(pgm_info_url)
